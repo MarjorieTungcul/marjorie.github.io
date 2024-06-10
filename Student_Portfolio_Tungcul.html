@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {
+        font-family: Times New Roman;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        height: 100vh;
+    }
+
+    .container {
+        max-width: 800px;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .navbar {
+        background-color: #555;
+        overflow: auto;
+    }
+
+    .navbar a {
+        float: left;
+        padding: 12px;
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .navbar a:hover {
+        background-color: #000;
+    }
+
+    .active {
+        background-color: #04AA6D;
+    }
+
+    @media screen and (max-width: 500px) {
+        .navbar a {
+            float: none;
+            display: block;
+        }
+    }
+
+    #content {
+        display: none;
+        padding: 1px;
+        text-align: justify;
+    }
+
+    #content img {
+        display: block;
+        margin:auto;
+        width: 240px;
+        height: 320px;
+        float: left;
+    }
+    .bulleted-list1 {
+        padding-left: 1em;
+    }
+     .bulleted-list {
+        list-style-type: circle ;
+        padding-left: 5em;
+    }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="navbar">
+      <a href="javascript:void(0);" onclick="showContent('Button 1')"> Button 1 </a> 
+      <a href="javascript:void(0);" onclick="showContent('Button 2')"> Button 2 </a> 
+      <a href="javascript:void(0);" onclick="showContent('Button 3')"> Button 3</a> 
+    </div>
+
+    <div id="content">
+        <h2 id="contentHeading"></h2>
+        <p  id="contentParagraph"></p>
+        <p  id="contentParagraph1"></p>
+        <p  class= "bulleted-list1" id="contentParagraph2"></p>
+        <ul class="bulleted-list">
+            <li id="contentParagraph3"></li>
+            <li id="contentParagraph4"></li>
+            <li id="contentParagraph5"></li>
+            <li id="contentParagraph6"></li>
+        </ul>
+        <p  class= "bulleted-list1" id="contentParagraph7"></p>
+        <ul class="bulleted-list">
+            <li id="contentParagraph8"></li>
+            <li id="contentParagraph9"></li>
+        </ul>
+        <p  class= "bulleted-list1" id="contentParagraph10"></p>
+        <ul class="bulleted-list">
+            <li id="contentParagraph11"></li>
+            <li id="contentParagraph12"></li>
+            <li id="contentParagraph13"></li>
+        </ul>
+
+        <img id="contentImage" src="" alt="">
+    </div>
+</div>
+
+<script>
+function showContent(buttonName) {
+  const content = document.getElementById("content");
+  const contentHeading = document.getElementById("contentHeading");
+  const contentParagraph = document.getElementById("contentParagraph");
+  const contentParagraph1 = document.getElementById("contentParagraph1");
+  const contentParagraph2 = document.getElementById("contentParagraph2");
+  const contentParagraph3= document.getElementById("contentParagraph3");
+  const contentParagraph4 = document.getElementById("contentParagraph4");
+  const contentParagraph5 = document.getElementById("contentParagraph5");
+  const contentParagraph6 = document.getElementById("contentParagraph6");
+  const contentParagraph7 = document.getElementById("contentParagraph7");
+  const contentParagraph8 = document.getElementById("contentParagraph8");
+  const contentParagraph9 = document.getElementById("contentParagraph9");
+  const contentParagraph10 = document.getElementById("contentParagraph10");
+  const contentParagraph11 = document.getElementById("contentParagraph11");
+  const contentParagraph12 = document.getElementById("contentParagraph12");
+  const contentParagraph13 = document.getElementById("contentParagraph13");
+  const contentImage = document.getElementById("contentImage");
+
+  switch (buttonName) {
+    case 'Button 1':
+      contentHeading.textContent = "Student Portfolio";
+      contentParagraph.textContent = " Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel ma<br>lesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.";
+     contentParagraph1.textContent = " Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.";
+     contentParagraph2.textContent ="1. Personal Information"
+     contentParagraph3.textContent ="Name: Marjorie Tungcul"
+     contentParagraph4.textContent ="Academic Program: Bachelor of Science in Information Technology"
+     contentParagraph5.textContent ="Age: 18"
+     contentParagraph6.textContent ="Birthday: December 11, 2004"
+     contentParagraph7.textContent ="2. Skills and Experience"
+     contentParagraph8.textContent ="Computer Network Configuration"
+     contentParagraph9.textContent ="Computer Reformatting"
+     contentParagraph10.textContent ="3. Graduation Skills and Experience"
+     contentParagraph11.textContent ="Elementary School: Selling Candies to my classmates"
+     contentParagraph12.textContent ="Junior High School: Knows the basic knowledge about Powerpoint, Excel, and Word"
+     contentParagraph13.textContent ="Senior High School: Manage a business "
+    
+      contentImage.src = "https://scontent.xx.fbcdn.net/v/t1.15752-9/379632210_2440594436143268_7384209511561056967_n.jpg?stp=dst-jpg_p168x128&_nc_cat=110&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeHy7_lJZQAM7NPDIHVUptK-xJH0WuU0-vXEkfRa5TT69eup0G7muD6YLbkx0o3h2jLoAI1m5bM5IUkCTUkz5Xi1&_nc_ohc=rlwmgCidx-8AX8pjM7e&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdS7xdR5lR99l1NQiUVb1xCQrYRuxNP3vPlp8lGI2oX1lg&oe=65311543"
+      break;
+    case 'Button 2':
+      contentHeading.textContent = "Student Portfolio1";
+      contentParagraph.textContent = " Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel ma<br>lesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.";
+     contentParagraph1.textContent = " Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.";
+     contentParagraph2.textContent ="1. Personal Information"
+     contentParagraph3.textContent ="Name: Marjorie Tungcul"
+     contentParagraph4.textContent ="Academic Program: Bachelor of Science in Information Technology"
+     contentParagraph5.textContent ="Age: 18"
+     contentParagraph6.textContent ="Birthday: December 11, 2004"
+     contentParagraph7.textContent ="2. Skills and Experience"
+     contentParagraph8.textContent ="Computer Network Configuration"
+     contentParagraph9.textContent ="Computer Reformatting"
+     contentParagraph10.textContent ="3. Graduation Skills and Experience"
+     contentParagraph11.textContent ="Elementary School: Selling Candies to my classmates"
+     contentParagraph12.textContent ="Junior High School: Knows the basic knowledge about Powerpoint, Excel, and Word"
+     contentParagraph13.textContent ="Senior High School: Manage a business "
+    
+      contentImage.src = "https://scontent.xx.fbcdn.net/v/t1.15752-9/379632210_2440594436143268_7384209511561056967_n.jpg?stp=dst-jpg_p168x128&_nc_cat=110&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeHy7_lJZQAM7NPDIHVUptK-xJH0WuU0-vXEkfRa5TT69eup0G7muD6YLbkx0o3h2jLoAI1m5bM5IUkCTUkz5Xi1&_nc_ohc=rlwmgCidx-8AX8pjM7e&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdS7xdR5lR99l1NQiUVb1xCQrYRuxNP3vPlp8lGI2oX1lg&oe=65311543"
+      break;
+    case 'Button 3':
+       contentHeading.textContent = "Student Portfolio2";
+      contentParagraph.textContent = " Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel ma<br>lesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.";
+     contentParagraph1.textContent = " Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.Lorem ipsum dolor sit amet, consectetur adipiscing. Sed ut justo vel ipsum pharetra scelerisque. Nullam vel malesuada orci, a varius libero.";
+     contentParagraph2.textContent ="1. Personal Information"
+     contentParagraph3.textContent ="Name: Marjorie Tungcul"
+     contentParagraph4.textContent ="Academic Program: Bachelor of Science in Information Technology"
+     contentParagraph5.textContent ="Age: 18"
+     contentParagraph6.textContent ="Birthday: December 11, 2004"
+     contentParagraph7.textContent ="2. Skills and Experience"
+     contentParagraph8.textContent ="Computer Network Configuration"
+     contentParagraph9.textContent ="Computer Reformatting"
+     contentParagraph10.textContent ="3. Graduation Skills and Experience"
+     contentParagraph11.textContent ="Elementary School: Selling Candies to my classmates"
+     contentParagraph12.textContent ="Junior High School: Knows the basic knowledge about Powerpoint, Excel, and Word"
+     contentParagraph13.textContent ="Senior High School: Manage a business "
+    
+      contentImage.src = "https://scontent.xx.fbcdn.net/v/t1.15752-9/379632210_2440594436143268_7384209511561056967_n.jpg?stp=dst-jpg_p168x128&_nc_cat=110&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeHy7_lJZQAM7NPDIHVUptK-xJH0WuU0-vXEkfRa5TT69eup0G7muD6YLbkx0o3h2jLoAI1m5bM5IUkCTUkz5Xi1&_nc_ohc=rlwmgCidx-8AX8pjM7e&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdS7xdR5lR99l1NQiUVb1xCQrYRuxNP3vPlp8lGI2oX1lg&oe=65311543"
+      break;
+  }
+
+  content.style.display = "block";
+}
+</script>
+
+</body>
+</html>
+
+ 
